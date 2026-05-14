@@ -18,7 +18,6 @@ export default function LoginForm() {
       const response = await client.post('/auth/login', { username, password })
       localStorage.setItem('token', response.data.access_token)
       navigate('/students', { replace: true })
-      // replace: true — pressing Back from /students does not return to /login
 
     } catch (err) {
       if (err.response) {
@@ -78,10 +77,3 @@ export default function LoginForm() {
   )
 }
 
-// Changes from Day 10:
-// 1. Removed onLoginSuccess and onSwitchToRegister props
-// 2. Added: const navigate = useNavigate()
-// 3. onLoginSuccess() replaced with: navigate('/students', { replace: true })
-// 4. onSwitchToRegister button replaced with: <Link to="/register">
-// 5. import axios replaced with: import client from '../api/client'
-// 6. Full URL in axios.post replaced with just the path in client.post

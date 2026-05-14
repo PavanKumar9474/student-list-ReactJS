@@ -12,7 +12,7 @@ export default function App1() {
     <div className="sma-app">
       <Routes>
 
-        {/* Public routes — no auth needed */}
+       
         <Route path="/" element={<LandingPage />} />
 
         <Route path="/login" element={
@@ -23,7 +23,7 @@ export default function App1() {
           <div className="sma-auth-layout"><RegisterForm /></div>
         } />
 
-        {/* Protected route — ProtectedRoute checks for JWT token */}
+  
         <Route path="/students" element={
           <ProtectedRoute>
             <>
@@ -35,13 +35,10 @@ export default function App1() {
           </ProtectedRoute>
         } />
 
-        {/* Catch-all — any unknown URL goes to landing page */}
+      
         <Route path="*" element={<Navigate to="/" replace />} />
 
       </Routes>
     </div>
   );
 }
-
-// Route order matters — Routes renders the FIRST match.
-// path="*" must always be LAST or it matches everything.

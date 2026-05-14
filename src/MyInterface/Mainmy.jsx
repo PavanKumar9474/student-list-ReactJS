@@ -27,7 +27,6 @@ function App() {
       alert("Captcha incorrect ❌");
       return;
     }
-    // Simulate success
     setUser({ name: isLogin ? 'User' : 'New User', email: 'user@example.com' });
     setShowContent(true);
     alert(isLogin ? "Login Success ✅" : "Registered ✅ Welcome!");
@@ -68,7 +67,6 @@ function App() {
         <input type="password" placeholder="Password" />
         {!isLogin && <input type="password" placeholder="Confirm Password" />}
 
-        {/* 🔐 Captcha */}
         {isLogin && (
           <>
             <div className="captcha-box">

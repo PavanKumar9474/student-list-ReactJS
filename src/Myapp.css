@@ -1,30 +1,24 @@
-/* Background */
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
   background: linear-gradient(135deg, #1e293b, #4f46e5);
 }
 
-/* Page */
 .page {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* height: 100vh; */
 }
 
 
-/* Title */
 .title {
   font-size: 34px;
   margin-bottom: 30px;
   background: linear-gradient(90deg, #38bdf8, #a855f7);
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Card */
 .card {
   width: 320px;
   padding: 25px;
@@ -35,28 +29,26 @@ body {
   box-shadow: 0 8px 25px rgba(0,0,0,0.3);
 }
 
-/* Inputs FIXED */
 .card input {
-  width: 90%;              /* not full width */
+  width: 90%;            
   padding: 12px;
-  margin: 12px auto;       /* auto = center */
-  display: block;          /* required for center */
+  margin: 12px auto;      
+  display: block;         
   border-radius: 10px;
   border: none;
   border-radius: 8px;
   outline: none;
-  background: rgba(255, 255, 255, 0.9);   /* brighter */
+  background: rgba(255, 255, 255, 0.9);   
   color: black;
   font-size: 14px;
   align-items: center;
 }
 
-/* Placeholder FIX */
 .card input::placeholder {
   color: #555;
 }
 
-/* Button */
+
 .card button {
   width: 100%;
   padding: 12px;
@@ -74,14 +66,14 @@ body {
   transform: scale(1.05);
 }
 
-/* Toggle */
+
 .toggle {
   margin-top: 15px;
   color: #38bdf8;
   cursor: pointer;
 }
 
-/* Captcha */
+
 .captcha-box {
   display: flex;
   justify-content: space-between;
@@ -91,9 +83,9 @@ body {
   padding: 10px;
   border-radius: 8px;
   margin-top: 10px;
-  width: 92%;            /* 👈 change width here */
-  height: 26px;          /* 👈 change height here */
-  margin: 10px auto;     /* center */
+  width: 92%;           
+  height: 26px;          
+  margin: 10px auto;     
 }
 
 .captcha-box button {
@@ -102,8 +94,6 @@ body {
   color: white;
   cursor: pointer;
 }
-
-
 
 
 
@@ -118,12 +108,12 @@ body {
   margin-bottom: 20px;
 }
 
-/* Section */
+
 .section {
   margin: 10px 0;
 }
 
-/* Button */
+
 .section-btn {
   width: 100%;
   padding: 12px;
@@ -135,7 +125,7 @@ body {
   text-align: left;
 }
 
-/* Content */
+
 
 .section-content {
   background: white;
@@ -150,7 +140,7 @@ body {
   color: #2563eb;
 }
 
-/* Code */
+
 pre {
   background: #0f172a;
   color: #38bdf8;

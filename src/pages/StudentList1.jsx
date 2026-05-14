@@ -7,7 +7,6 @@ export default function StudentList() {
   const [loading, setLoading]   = useState(true)
   const [error, setError]       = useState('')
 
-  // fetchStudents defined outside useEffect so handleDelete can call it too
   const fetchStudents = async () => {
     setLoading(true)
     setError('')
@@ -23,14 +22,14 @@ export default function StudentList() {
 
   useEffect(() => {
     fetchStudents()
-  }, [])  // [] — fetch once when the component mounts
+  }, [])
 
   const handleDelete = async (id) => {
     if (!window.confirm('Delete this student? This cannot be undone.')) return
 
     try {
       await client.delete(`/students/${id}`)
-      fetchStudents()   // re-fetch to keep the list in sync
+      fetchStudents()
     } catch (err) {
       alert('Delete failed. Please try again.')
     }
@@ -73,6 +72,3 @@ export default function StudentList() {
   )
 }
 
-// This is the FINAL version of StudentList.
-// Day 12 does NOT modify this component.
-// Day 12 adds an edit button to StudentCard that links to a new page.

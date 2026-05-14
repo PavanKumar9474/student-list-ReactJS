@@ -1,4 +1,3 @@
-// src/components/AiChatPage.jsx
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import client from '../pages/Client'
@@ -16,10 +15,9 @@ export default function MyBot() {
 
     setLoading(true)
     setError('')
-    setAnswer('')   // clear previous answer before new request
+    setAnswer('')  
 
     try {
-      // client already adds Authorization: Bearer <token> via interceptor
       const res = await client.post('/ai/ask', { question })
       setAnswer(res.data.answer)
     } catch (err) {
@@ -31,7 +29,6 @@ export default function MyBot() {
 
   return (
     <>
-      {/* <Header /> */}
       <main className="sma-main">
         <div className="ai-page">
           <div className="ai-page-header">

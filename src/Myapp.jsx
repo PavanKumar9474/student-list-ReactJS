@@ -23,8 +23,8 @@ function App() {
     <StudentCard />
     <Mainmy />
     <LogRegmain />
-    <Routerss /> */}
-    {/* <Pages /> */}
+    <Routerss />
+    <Pages /> */}
     <Dynamic />
     </>
   )

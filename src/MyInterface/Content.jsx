@@ -87,7 +87,6 @@ function Content() {
         )}
       </div>
 
-      {/* REGISTER UI */}
       <div className="section">
         <button onClick={() => toggle("register")} className="section-btn">
           🧾 Register Page Example
@@ -112,7 +111,7 @@ function Content() {
         )}
       </div>
 
-      {/* API */}
+
       <div className="section">
         <button onClick={() => toggle("api")} className="section-btn">
           🐍 FastAPI + CRUD
@@ -137,7 +136,6 @@ def create_user(user):
         )}
       </div>
 
-      {/* CONNECT */}
       <div className="section">
         <button onClick={() => toggle("connect")} className="section-btn">
           🔗 Connect Frontend & Backend
@@ -158,7 +156,6 @@ def create_user(user):
         )}
       </div>
 
-      {/* DEPLOY */}
       <div className="section">
         <button onClick={() => toggle("deploy")} className="section-btn">
           🌐 GitHub + Vercel

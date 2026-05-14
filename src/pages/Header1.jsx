@@ -32,9 +32,3 @@ export default function Header() {
   )
 }
 
-// Changes from Day 10:
-// 1. Removed onLogout prop — Header manages its own logout logic
-// 2. Added: const navigate = useNavigate()
-// 3. handleLogout now calls navigate('/') instead of calling the prop
-// 4. Static span for title replaced with <Link>
-// 5. Static span for nav item replaced with <NavLink> for active styling

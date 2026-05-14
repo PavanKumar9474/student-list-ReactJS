@@ -8,12 +8,12 @@ const students = [
 function StudentList() {
   return (
     <div className="sma-student-list">
-      {/* {students.map(s => (
+      {students.map(s => (
         <div className="sma-student-card" key={s.name}>
           <h3>{s.name}</h3>
           <p>{s.age}</p>
         </div>
-      ))} */}
+      ))}
       <Mymain />
     </div>
   );

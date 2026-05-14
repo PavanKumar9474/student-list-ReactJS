@@ -23,9 +23,9 @@ export default function CreateStudentPage() {
     try {
       await client.post('/students', {
         ...form,
-        age: Number(form.age),   // age must be a number for FastAPI's schema
+        age: Number(form.age),  
       })
-      navigate('/students')      // go back to the list after creating
+      navigate('/students')     
 
     } catch (err) {
       setError(err.response?.data?.detail || 'Failed to create student')

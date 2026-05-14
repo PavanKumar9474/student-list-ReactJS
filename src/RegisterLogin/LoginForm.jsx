@@ -11,8 +11,8 @@ export default function LoginForm({ onLoginSuccess, onSwitchToRegister }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('');           // clear previous error
-    setLoading(true);       // disable button, show loading text
+    setError('');          
+    setLoading(true);     
 
     try {
       const response = await axios.post(`${API_BASE}/auth/login`, {
@@ -20,20 +20,19 @@ export default function LoginForm({ onLoginSuccess, onSwitchToRegister }) {
         password,
       });
 
-      // Store the JWT token in localStorage
+    
       localStorage.setItem('token', response.data.access_token);
-      onLoginSuccess();    // tell App.jsx login succeeded
+      onLoginSuccess();    
 
     } catch (err) {
       if (err.response) {
-        // Server responded with an error status (401, 400, etc.)
+      
         setError(err.response.data.detail || 'Login failed');
       } else {
-        // No response — network error, server not running
         setError('Cannot reach the server. Is FastAPI running on port 8000?');
       }
     } finally {
-      setLoading(false);   // always re-enable button
+      setLoading(false);   
     }
   };
 

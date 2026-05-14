@@ -35,9 +35,6 @@ export default function App() {
             </>
           </ProtectedRoute>
         } />
-
-        {/* IMPORTANT: /students/new must come BEFORE /students/:id/edit
-            otherwise 'new' would be matched as the :id parameter */}
         <Route path="/students/new" element={
           <ProtectedRoute><CreateStudentPage /></ProtectedRoute>
         } />
@@ -51,11 +48,3 @@ export default function App() {
     </div>
   );
 }
-
-// Complete route table for the app:
-// GET /           → LandingPage       (public)
-// GET /login      → LoginForm         (public)
-// GET /register   → RegisterForm      (public)
-// GET /students   → StudentList       (protected)
-// GET /students/new       → CreateStudentPage (protected)
-// GET /students/:id/edit  → EditStudentPage   (protected)

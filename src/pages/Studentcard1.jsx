@@ -29,10 +29,3 @@ export default function StudentCard({ student, onDelete }) {
     </div>
   )
 }
-
-// Changes from Day 9:
-// 1. Now accepts 'student' object prop instead of individual props
-// 2. Destructures id, name, age, email, city from student
-// 3. Added: sma-card-actions div with delete button
-// 4. Delete button calls onDelete(id) — StudentList handles the API call
-// Note: Edit button is added in Day 12 when we build the edit page

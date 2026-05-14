@@ -32,7 +32,6 @@ function Hookstate(){
 
 	return(
 	<div style={{textAlign:"center",fontSize:"20px",fontWeight:"bold",border:"5px solid black",borderRadius:"20px"}}>EXAMPLE PRACTISES
-		{/* <h1> EXAMPLE PRACTISES</h1> */}
 		<h1 style={Btn}>count : {c}</h1>
 		<button onClick={Increment} style={primaryBtn}> INCREMENT </button>
 		<button onClick={()=>setC(c-1)} disabled={c==0} style={primaryBtn}>DECREMENT</button>
