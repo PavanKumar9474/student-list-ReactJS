@@ -1,0 +1,160 @@
+/* Background */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #1e293b, #4f46e5);
+}
+
+/* Page */
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* height: 100vh; */
+}
+
+
+/* Title */
+.title {
+  font-size: 34px;
+  margin-bottom: 30px;
+  background: linear-gradient(90deg, #38bdf8, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Card */
+.card {
+  width: 320px;
+  padding: 25px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* Inputs FIXED */
+.card input {
+  width: 90%;              /* not full width */
+  padding: 12px;
+  margin: 12px auto;       /* auto = center */
+  display: block;          /* required for center */
+  border-radius: 10px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);   /* brighter */
+  color: black;
+  font-size: 14px;
+  align-items: center;
+}
+
+/* Placeholder FIX */
+.card input::placeholder {
+  color: #555;
+}
+
+/* Button */
+.card button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #7c3aed, #2563eb);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  transform: scale(1.05);
+}
+
+/* Toggle */
+.toggle {
+  margin-top: 15px;
+  color: #38bdf8;
+  cursor: pointer;
+}
+
+/* Captcha */
+.captcha-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  color: #38bdf8;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 10px;
+  width: 92%;            /* 👈 change width here */
+  height: 26px;          /* 👈 change height here */
+  margin: 10px auto;     /* center */
+}
+
+.captcha-box button {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+
+
+
+.content-container {
+  max-width: 700px;
+  margin: auto;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Section */
+.section {
+  margin: 10px 0;
+}
+
+/* Button */
+.section-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #7c3aed, #2563eb);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  text-align: left;
+}
+
+/* Content */
+
+.section-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 5px;
+  line-height: 1.6;
+}
+
+.section-content h4 {
+  margin-top: 10px;
+  color: #2563eb;
+}
+
+/* Code */
+pre {
+  background: #0f172a;
+  color: #38bdf8;
+  padding: 10px;
+  border-radius: 6px;
+  overflow-x: auto;
+}
