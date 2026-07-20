@@ -1,64 +1,90 @@
+/* =========================================
+   STUDENT PORTAL DASHBOARD & PAGES
+========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+body {
+  background-color: #080b11;
+  color: #f1f5f9;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
 .sma-landing {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f4f5f7;
+  background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.12) 0%, rgba(255, 255, 255, 0) 60%),
+              #080b11;
+  padding: 24px;
 }
 
 .sma-landing-card {
   text-align: center;
-  max-width: 480px;
-  padding: 3rem 2rem;
+  max-width: 500px;
+  padding: 4rem 2.5rem;
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
 
 .sma-landing-logo {
-  font-size: 2.5rem;
-  color: #2563eb;
-  margin-bottom: 1rem;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 4px 10px rgba(139, 92, 246, 0.3));
 }
 
 .sma-landing-title {
-  font-size: 1.75rem;
+  font-size: 2.25rem;
   font-weight: 800;
-  color: #1a1a2e;
-  margin-bottom: 0.75rem;
-  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+  background: linear-gradient(135deg, #ffffff, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .sma-landing-subtitle {
   font-size: 1rem;
-  color: #64748b;
+  color: #94a3b8;
   line-height: 1.6;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .sma-landing-actions {
   display: flex;
-  gap: 0.75rem;
+  gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .sma-btn-lg {
-  padding: 11px 28px;
-  font-size: 0.95rem;
+  padding: 14px 32px;
+  font-size: 1rem;
+  border-radius: 14px;
 }
 
 .sma-btn-outline {
   background: transparent;
-  border: 1.5px solid #2563eb;
-  color: #2563eb;
-  border-radius: 7px;
-  font-weight: 600;
+  border: 2px solid #8b5cf6;
+  color: #a78bfa;
+  border-radius: 14px;
+  font-weight: 700;
   cursor: pointer;
-  transition: background 0.15s;
+  transition: all 0.25s ease;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sma-btn-outline:hover {
-  background: #eff6ff;
+  background: rgba(139, 92, 246, 0.08);
+  color: #ffffff;
 }
 
 a.sma-btn {
@@ -68,77 +94,342 @@ a.sma-btn {
   justify-content: center;
 }
 
+/* =========================================
+   HEADER STYLING
+========================================= */
+.sma-header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  background: rgba(17, 24, 39, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.sma-header-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sma-header-logo {
+  font-size: 24px;
+  color: #8b5cf6;
+}
+
 .sma-header-title-link {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #1a1a2e;
-  letter-spacing: -0.01em;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.5px;
   text-decoration: none;
+  background: linear-gradient(135deg, #ffffff, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.sma-header-title-link:hover {
-  color: #2563eb;
+.sma-header-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.sma-card-actions {
+.sma-header-nav-item {
+  padding: 8px 16px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 10px;
+}
+
+.sma-header-nav-item:hover, .sma-nav-active {
+  background: rgba(139, 92, 246, 0.08);
+  color: #a78bfa;
+}
+
+/* =========================================
+   MAIN SECTION & STUDENT GRID
+========================================= */
+.sma-main {
+  width: 95%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.sma-section {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  margin-left: auto;
-  flex-shrink: 0;
+  gap: 30px;
 }
 
-.sma-btn-icon {
-  width: 30px;
-  height: 30px;
-  border: none;
-  border-radius: 6px;
+.sma-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 20px;
+}
+
+.sma-section-title {
+  font-size: 28px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sma-student-count {
+  font-size: 14px;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sma-student-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* =========================================
+   STUDENT CARD
+========================================= */
+.sma-student-card {
+  background: rgba(17, 24, 39, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 24px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  transition: all 0.25s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.sma-student-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(139, 92, 246, 0.3);
+  box-shadow: 0 15px 30px rgba(139, 92, 246, 0.1);
+}
+
+.sma-student-card-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #8b5cf6, #3b82f6);
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.75rem;
+  font-size: 20px;
+  font-weight: 800;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(139, 92, 246, 0.3);
+}
+
+.sma-student-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-grow: 1;
+}
+
+.sma-student-card-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.sma-student-card-detail {
+  font-size: 13px;
+  color: #94a3b8;
+  margin: 0;
+  word-break: break-all;
+}
+
+.sma-student-card-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.sma-student-card-age {
+  font-size: 13px;
+  font-weight: 600;
+  color: #a78bfa;
+}
+
+.sma-student-card-tag {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2px 8px;
+  border-radius: 6px;
+  color: #cbd5e1;
+}
+
+.sma-card-actions-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+  gap: 8px;
+}
+
+.sma-btn-sm {
+  padding: 6px 14px;
+  font-size: 12px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+/* =========================================
+   FORM PAGES (ADD/EDIT)
+========================================= */
+.sma-form-page {
+  max-width: 550px;
+  margin: 40px auto;
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.sma-form-page-header {
+  margin-bottom: 24px;
+}
+
+.sma-back-link {
+  font-size: 13px;
+  color: #94a3b8;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.sma-back-link:hover {
+  color: #a78bfa;
+}
+
+.sma-form-page-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+}
+
+.sma-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.sma-btn-ghost {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #cbd5e1;
+  border-radius: 12px;
+}
+
+.sma-btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+}
+
+/* =========================================
+   STATUS AND UTILITY VIEWS
+========================================= */
+.sma-btn-icon {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background 0.15s, color 0.15s;
+  background: rgba(255, 255, 255, 0.05);
+  color: #94a3b8;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.sma-btn-icon:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
 }
 
 .sma-btn-icon-delete {
-  background: #fef2f2;
-  color: #dc2626;
+  background: rgba(239, 68, 68, 0.1);
+  color: #fca5a5;
 }
 
 .sma-btn-icon-delete:hover {
-  background: #fee2e2;
+  background: rgba(239, 68, 68, 0.2);
+  color: #ffffff;
 }
 
 .sma-status {
   text-align: center;
-  padding: 3rem 1rem;
-  color: #64748b;
-  font-size: 0.9rem;
+  padding: 4rem 2rem;
+  color: #94a3b8;
+  font-size: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .sma-status-error {
-  color: #dc2626;
+  color: #fca5a5;
 }
 
 .sma-retry-btn {
-  padding: 7px 18px;
-  background: #2563eb;
+  padding: 10px 24px;
+  background: linear-gradient(135deg, #8b5cf6, #3b82f6);
   color: #fff;
   border: none;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  font-weight: 600;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 700;
   cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.sma-retry-btn:hover {
+  transform: translateY(-1px);
 }
 
 .sma-empty-state {
   text-align: center;
-  padding: 4rem 1rem;
+  padding: 5rem 2rem;
   color: #94a3b8;
-  font-size: 0.95rem;
+  background: rgba(17, 24, 39, 0.5);
+  border-radius: 20px;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  font-size: 1rem;
 }

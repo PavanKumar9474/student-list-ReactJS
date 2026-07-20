@@ -1,7 +1,5 @@
 import { useState } from 'react'
-import axios from 'axios'
-
-const API_BASE = 'http://localhost:8000'
+import client from '../pages/Client'
 
 export default function RegisterForm({ onSwitchToLogin }) {
   const [username, setUsername] = useState('');
@@ -17,7 +15,7 @@ export default function RegisterForm({ onSwitchToLogin }) {
     setLoading(true); 
 
     try {
-      await axios.post(`${API_BASE}/auth/register`, {
+      await client.post('/auth/register', {
         username,
         password,
       });
